@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let regulaxHoa=/^[0-9]{1,1}/;
+    let diemHoa = parseInt(prompt("nhap diem hoa: "));
+    while (true) {
+        if (regulaxHoa.test(diemHoa)) {
+            break;
+        } else {
+            alert("bạn nhập khoảng điểm sai!");
+            diemHoa = parseInt(prompt("nhập lại điểm hóa: "))
+        }
+    }
+    let diemLy=parseInt(prompt("nhập điểm Lý: "));
+    let diemToan=parseInt(prompt("nhập điểm Toán: "));
+    alert("điểm trung bình của bạn là: "+(diemHoa+diemToan+diemLy)/3);
+</script>
+</body>
+</html>

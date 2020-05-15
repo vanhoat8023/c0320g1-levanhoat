@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let nhietDo=parseInt(prompt("nhiệt độ nhập vào: "));
+    while (nhietDo<20||nhietDo>100) {
+        if (nhietDo > 100) {
+            nhietDo = parseInt(prompt("ban can giam nhiet do: "))
+        } else if (nhietDo < 20) {
+            nhietDo = parseInt(prompt("ban can tang nhiet do: "))
+        }
+    }
+    alert(nhietDo);
+</script>
+</body>
+</html>

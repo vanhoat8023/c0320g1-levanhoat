@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<p>bạn đã sẵn sàng chơi</p>
+<input onclick="star()" value="Submit" type="submit">
+
+</select>
+<body>
+<script>
+    function star() {
+        let nhap=parseInt(prompt("nhập khoảng bạn đoán"))
+        if (nhap < 10) {
+            alert("bạn đã chọn khoảng từ 1-10!");
+            for (let i=0;i<3;i++) {
+                let c = parseInt(prompt("bạn nhập số bạn đoán: "));
+                if (c == Math.floor(Math.random() * 10)) {
+                    alert("bạn đã chọn đúng!");
+                    break;
+                } else {
+                    c = parseInt(prompt("bạn nhập số bạn đoán: "));
+                }
+                if (i==2){alert("bạn đã nhập hết số lượt!")}
+            }
+        } else if (nhap < 100) {
+
+        } else if (nhap < 1000) {
+
+        }
+    }
+</script>
+</body>
+</html>
