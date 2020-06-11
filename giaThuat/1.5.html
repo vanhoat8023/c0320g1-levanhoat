@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>1.5</title>
+</head>
+<body>
+<script>
+    let result=0;
+    let i=0;
+    n=parseInt(prompt("nhập n: "));
+    let temp;
+    while (i<=n){
+         temp=1;
+        for (let j=1;j<=i;j++){
+            temp*=j;
+        }
+        if (i%2!=0){
+            result+=1/temp
+        }
+        i++;
+    }
+    alert(result)
+</script>
+</body>
+</html>

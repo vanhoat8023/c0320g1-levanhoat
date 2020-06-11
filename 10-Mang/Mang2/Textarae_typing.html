@@ -5,31 +5,19 @@
     <title>Title</title>
 </head>
 <body>
-<form name="t">
-    <h1>Type anthing slowly</h1>
-    <textarea name ="txt" id="blabla" cols="50" rows="10" onkeydown="typeTextarea()"></textarea>
-</form>
+<h2>Typing Anything Slowly</h2>
+<textarea ("txa");
+txa.addEventListener("input", e => {
+let element = e.target;
+let a = parseInt(element.dataset.action);
+if (a == x.length)
+element.datid="txa" rows="20" cols="90" data-action="0"></textarea>
 <script>
-    let auto=['T','Ô','I',' ','L','À',' ','M','Ộ','T',' ','Đ','Ứ','A',' ','N','G','Ố','C','!','!'];
-    let out=" ";
-    function typeTextarea() {
-        let text = document.t.txt.value;
-        if (text.length > 0) {
-            for (i = 0; i <= text.length; i++) {
-                out += auto[i];
-                if (i == auto.length) {
-                    document.t.txt.value = ' ';
-                    out = " ";
-                }
-
-            }
-        }
-        document.t.txt.value = out;
-        out=" ";
-        setTimeout(1)
-    }
-
-
+    let x = "Hello World. My name is CodeGym";
+    let txa = document.getElementByIdaset.action = "0";
+        txa.value = x.substring(0,a);
+        element.dataset.action++;
+    })
 </script>
 </body>
 </html>

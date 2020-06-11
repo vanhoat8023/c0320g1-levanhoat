@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<h2>Kiểm tra số nguyên tố</h2>
+<table>
+    <tr>
+        <td>Nhập số cần kiểm tra: </td>
+        <td><input oninput="kTraSoNguyenTo(this.value)" placeholder="Nhập" type="number"></td>
+    </tr>
+    <tr>
+        <p><td>Kết quả:</td>
+        <td><span id="ketQua"></span></td></p>
+    </tr>
+</table>
+<body>
+<script>
+    function kTraSoNguyenTo(valNum) {
+        let check = 0;
+        if (valNum < 1) {
+            document.getElementById("ketQua").innerHTML = "bạn lớp mấy rồi!.chưa nhập sao trả lời"
+        } else {
+            for (let i=2;i<=Math.sqrt(valNum);i++){
+                if (valNum%i==0){
+                    check+=1;
+                }else continue
+            }
+            if (check==0){
+                document.getElementById("ketQua").innerHTML="đây là số nguyên tố"
+            }else{
+                document.getElementById("ketQua").innerHTML="đây không phải là số nguyên tố"
+            }
+                }
+    }
+</script>
+</body>
+</html>

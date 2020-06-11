@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Circle {
+        constructor(radius) {
+            this.radius= radius;
+        }
+        get erea(){
+            return Math.PI*this.radius*this.radius;
+        }
+    }
+    let radius=parseInt(prompt("nhập bán kính:"))
+    let hinhTron= new Circle(radius);
+    alert('hinhTron= '+ hinhTron.erea);
+</script>
+</body>
+</html>

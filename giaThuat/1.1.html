@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>1.1</title>
+</head>
+<body>
+<p id="demo"></p>
+<script>
+    n=parseInt(prompt("nhập số dòng(cột):"));
+    let result="";
+    for (let i=0;i<n;i++){
+        result+="<br>";
+        for (let j=0;j<n;j++){
+            result+="*";
+        }
+    }
+    document.getElementById("demo").innerHTML=result;
+</script>
+</body>
+</html>

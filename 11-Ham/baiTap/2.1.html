@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+<h2 style="color: red">Tính giai thừa</h2>
+<label style="color: blue" style="font-size: small">Nhập giá trị:</label>
+<input placeholder="Nhập giá trị" oninput="nhap(this.value)" type="number"><br>
+<label style="color: chartreuse">giai thừa là:</label><span id="ketQua"></span>
+<script>
+    function nhap(valNum) {
+        let giaiThua = 1;
+        if (valNum < 1) {
+            document.getElementById("ketQua").innerHTML = "bạn nhập giá trị sai rồi"
+        } else {
+            for (let i = 1; i <= valNum; i++) {
+                giaiThua *= i;
+            }
+        }
+        // if (giaiThua < 10000000) {
+            document.getElementById("ketQua").innerHTML = giaiThua;
+        // }else document.getElementById("ketQua").innerHTML="nhập số nhỏ thôi máy nó tính cũng mệt"
+    }
+</script>
+</body>
+</html>

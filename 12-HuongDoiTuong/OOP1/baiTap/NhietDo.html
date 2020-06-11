@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class NhietDo{
+        constructor(c) {
+            this.c=c;
+        }
+        dof(){
+            return c*9/5+32;
+        }
+        dokenvin(){
+            return c+273;
+        }
+    }
+    let c=parseInt(prompt("nhập nhiệt độ"));
+    let nhietdo=new NhietDo(c);
+    alert(`độ f: ${nhietdo.dof()} độ kenvin: ${nhietdo.dokenvin()}`);
+</script>
+</body>
+</html>

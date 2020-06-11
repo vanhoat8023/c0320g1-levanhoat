@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<h2>Chuyển đổi độ dài</h2>
+<label>Nhập độ dài cần chuyển:</label>
+<input placeholder="Nhập" oninput="thucThi(this.value)" type="number">
+<label>from:</label>
+<select id="from">
+    <option>Feet</option>
+    <option>Meters</option>
+</select>
+<label>To:</label>
+<select id="to">
+    <option>Meters</option>
+    <option>Feet</option>
+</select>
+<p id="ketQua">kết quả</p>
+<body>
+<script>
+    function thucThi(doDai) {
+        let fromTeperature=document.getElementById("from").value;
+        let toTeperature=document.getElementById("to").value;
+        if (fromTeperature==="Feet"&&toTeperature==="Meters"){
+            document.getElementById("ketQua").innerHTML=doDai*0.305;
+        }else if (fromTeperature==="Meters"&&toTeperature==="Feet"){
+            document.getElementById("ketQua").innerHTML=doDai*3.279;
+        }else alert("bạn cần chọn loại tiền cần chuyển")
+    }
+</script>
+</body>
+</html>

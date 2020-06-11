@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="myCanvas" width="1368px" height="768px" style="border:1px solid #d3d3d3;"></canvas>
+<script>
+    class HinhChuNhat{
+        constructor(chieuDai,chieuRong) {
+            this.ChieuDai=chieuDai;
+            this.ChieuRong=chieuRong;
+        }
+        dienTich(){
+            return this.ChieuDai*this.ChieuRong;
+        }
+        chuVi(){
+            return 2*(this.ChieuRong+this.ChieuDai)
+        }
+    }
+    let chieuDai=parseInt(prompt("nhập chiều dài: "));
+    let chieuRong=parseInt(prompt("nhập chiều rộng: "));
+    let hinhCN1=new HinhChuNhat(chieuDai,chieuRong);
+    alert("diện tích:"+hinhCN1.dienTich()+ "chu vi: "+ hinhCN1.chuVi());
+</script>
+</body>
+</html>

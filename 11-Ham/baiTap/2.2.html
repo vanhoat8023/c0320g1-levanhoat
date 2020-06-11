@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>Kiểm tra ký tự</h2>
+<input placeholder="Nhập ký tự" oninput="kyTu(this.value)">
+<p id="ketQua"></p>
+<script>
+    function kyTu(valText) {
+        let check = true;
+        for (let i = 0; i < valText.length; i++) {
+                if (isNaN(valText[i])) {
+                    check = false;
+                    break;
+                }
+            }
+        if (check) {
+            document.getElementById("ketQua").innerHTML = "đây là chữ số!"
+        } else document.getElementById("ketQua").innerHTML = "đây là chữ!"
+    }
+</script>
+</body>
+</html>

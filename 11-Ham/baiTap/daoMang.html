@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2 style="color: blue">Đảo mảng</h2>
+<label>Nhập mảng cần đảo ngược</label>
+<input oninput="daoMang(this.value)" type="text">
+<p style="color: red" id="ketQua"></p>
+<script>
+    function daoMang(arr) {
+        for (let i=0;i<arr.length/2;i++){
+            let t=arr[i];
+            arr[i]=arr[arr.length-1-i];
+            arr[arr.length-1-i]=t;
+        }
+        document.getElementById("ketQua").innerHTML=arr;
+    }
+</script>
+</body>
+</html>

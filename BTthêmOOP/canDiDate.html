@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>candidate</title>
+</head>
+<body>
+<script>
+    class CanDiDate {
+        constructor() {
+        }
+
+        setName(name) {
+            this.name = name;
+        }
+
+        getName() {
+            return this.name;
+        };
+
+        setBirthday(birthday) {
+            this.birthday = birthday;
+        }
+
+        getBirthday() {
+            return this.birthday;
+        };
+
+        setPointAnh(pointAnh) {
+            this.pointAnh = pointAnh;
+        }
+
+        getPointAnh() {
+            return this.pointAnh;
+        }
+
+        setPointToan(pointToan) {
+            this.pointToan = pointToan;
+        }
+
+        getPointToan() {
+            return this.pointToan;
+        }
+
+        setPointVan(pointVan) {
+            this.pointVan = pointVan;
+        }
+
+        getPointVan() {
+            return this.pointVan;
+        }
+
+        getDiemTB() {
+            return (this.pointAnh + this.pointToan + this.pointVan) / 3;
+        }
+    }
+
+    let hocsinh = new CanDiDate();
+    let listCanDiDate = [];
+    let n = parseInt(prompt("nhập số học sinh"));
+    for (let i = 0; i < n; i++) {
+        check=false;
+        let regexpName=/^[A-Z][a-z]{0,}/;
+        while (!check){
+            hocsinh.setName(prompt("nhập tên học sinh"));
+            if (regexpName.test(hocsinh.getBirthday())){
+                check=true;
+            }
+        }
+
+        check=false;
+        let regexpBirthday=/[0-9]{2}\/[0-9]{2}\/[0-9]{4}/;
+        while (!check){
+            hocsinh.setBirthday(prompt("nhập ngày sinh của học sinh"));
+            if (regexpBirthday.test(hocsinh.getBirthday())){
+                check=true;
+            }
+        }
+        hocsinh.setPointAnh(parseInt(prompt("nhập điểm anh:")));
+        hocsinh.setPointVan(parseInt(prompt("nhập điểm văn")));
+        hocsinh.setPointToan(parseInt(prompt("nhập điểm toán:")));
+        listCanDiDate.push(hocsinh);
+        alert("bạn đã thêm thành công học sinh thứ"+(i+1))
+    }
+    let result = "";
+    for (let i = 0; i < listCanDiDate.length; i++) {
+        result += i + ".Name" + listCanDiDate[i].getName() + "\n";
+    }
+    let choose = parseInt(prompt(result));
+    alert("Tên:" + listCanDiDate[choose].getName() + "\n" +
+        "Ngày sinh: " + listCanDiDate[choose].getBirthday() + "\n" +
+        "Điểm môn Anh:" + listCanDiDate[choose].getPointAnh() + "\n" +
+        "Điểm môn Toán: " + listCanDiDate[choose].getPointToan() + "\n" +
+        "Điểm môn Văn: " + listCanDiDate[choose].getPointVan() + "\n" +
+        "Điểm trung bình: " + listCanDiDate[choose].getDiemTB());
+</script>
+</body>
+</html>

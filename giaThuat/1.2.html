@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>1.2</title>
+</head>
+<table>
+    <tr>
+        <td>Nhập năm cần kiểm tra: </td>
+        <td><input oninput="kTraNam(this.value)" placeholder="Nhập" type="number"></td>
+    </tr>
+    <tr>
+        <p><td>Kết quả:</td>
+        <td><span id="ketQua"></span></td></p>
+    </tr>
+</table>
+<body>
+<script>
+    let isLeapYear = false;
+    let year = parseInt(prompt("Enter a year: "));
+    if (year % 4 == 0) {
+        if (year % 100 == 0) {
+            if (year % 400 == 0) {
+                isLeapYear = true;
+            }
+        } else {
+            isLeapYear = true;
+        }
+    }
+    if (isLeapYear){
+        document
+    }else alert("đây không phải là năm nhuận!")
+</script>
+</body>
+</html>

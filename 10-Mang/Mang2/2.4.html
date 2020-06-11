@@ -1,0 +1,30 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a=[1,2,3,4,5,6];
+    let b=[];
+    let check=true;
+    alert("mảng bạn cần nhập gồm 6 phần tử! ");
+    for (let i=0;i<6;i++){
+        n=parseInt(prompt("bạn nhập phần tử thứ "+i));
+        b.push(n);
+    }
+    for (let i=0;i<a.length;i++){
+        for (let j=0;j<b.length;j++){
+            if (a[i]!=b[i]){
+                check=false;
+                break;
+            }
+        }
+    }
+    if (check){
+        alert("mảng bạn nhập giống với mảng của chúng tôi!");
+    }else alert("mảng bạn nhập như lìn!")
+</script>
+</body>
+</html>

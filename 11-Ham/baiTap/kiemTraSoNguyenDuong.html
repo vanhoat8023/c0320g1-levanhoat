@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>Kiểm tra số nguyên dương</h2>
+<label style="color: red">Nhập số cần kiểm tra</label>
+<input oninput="myNumber(this.value)" type="number">
+<p style="color: #103FFB" id="ketQua"></p>
+<script>
+    function myNumber(n) {
+        if (n<0){
+            document.getElementById("ketQua").innerHTML="đây là số nguyên âm";
+        }else if (n==0){
+            document.getElementById("ketQua").innerHTML="số này trung tính!"
+        }else document.getElementById("ketQua").innerHTML="đây là số nguyên dương!"
+    }
+</script>
+</body>
+</html>

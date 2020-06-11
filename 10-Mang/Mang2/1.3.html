@@ -9,12 +9,24 @@
     let english = ["hello", "i", "you", "we", "they"]
     let viet = ["xinchao", "tôi", "bạn", "chúng", "chúng nó"];
     let nhap = prompt("nhập từ điển cần tra: ");
+    let check=false;
+    let kiemtra="";
     for (i = 0; i < viet.length; i++) {
-        if (nhap == viet[i]) {
-            alert(english[i]);
-            break
+        for (j=0;j<english.length;j++) {
+            if (nhap == viet[i]) {
+                kiemtra=english[i];
+                check=true;
+                break;
+            }else if (nhap==english[j]){
+                kiemtra=viet[j];
+                check=true
+                break;
+            }else check=false;
         }
     }
+    if (check){
+        alert(kiemtra);
+    }else alert("bạn nhập từ mà từ điển chúng tôi không có!")
 </script>
 </body>
 </html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let dem = 0;
+    alert("nhập mảng gồm 10 phần tử");
+    let arr = [];
+    let e = "các phần tử lơn hơn 10 là: " + "<hr>";
+    for (let i = 0; i < 10; i++) {
+        n = parseInt(prompt("nhập phần tử thứ: " + (i + 1)));
+        arr.push(n);
+    }
+    for (let i = 0; i < 10; i++) {
+        if (arr[i] > 10) {
+            dem += 1;
+            e += "phần tử " + (i + 1) + " là " + arr[i] + "<br>";
+        }
+    }
+        alert("số phần tử trong mảng lớn hơn 10 là: " + dem);
+        document.write(e)
+</script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>Title</title>
+</head>
+<body>
+<script>
+let input = prompt("Input a string:")
+let e =[["hello","xin chao"],["world","the gioi"],["table","cai ban"],["earth","trai dat"],["king","vua"]];
+let t = e.find(e=>{
+return e[0]==input;
+});
+let res= typeof t=="undefined"?"No result": t[1];
+document.write(res);
+</script>
+</body>
+</html>

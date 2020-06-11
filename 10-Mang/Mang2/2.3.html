@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr=["abc","2c1",["113","s21a","q2s"],"rec"];
+    let dem=0;
+    let e=""
+    for (let i=0;i<arr.length;i++){
+        for (let j=0;j<arr[i].length;j++){
+            for (let k=0;k<arr[i][j].length;k++){
+                dem+=1;
+                e+=arr[i][j][k];
+            }
+        }
+    }
+    alert("số ký tự của mảng là: "+ dem+" bảng ký tự là: "+e);
+</script>
+</body>
+</html>

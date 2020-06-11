@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3>Bài toán bóng đèn</h3>
+<img src="unnamed.png" height="300" width="200" id="lamp"/>
+<br>
+<button onclick="onOff()" id="switch">tắt/bật</button>
+<p id="result"></p>
+<script>
+    class SwitchButton {
+        constructor(status) {
+            this.Status = status;
+        }
+
+        getStatus() {
+            return this.Status;
+        }
+
+
+        onOff() {
+            this.Status = !this.Status;
+        }
+    }
+
+    class Light {
+        constructor(SwitchButton) {
+            this.SwitchButton = SwitchButton;
+        }
+
+        onLight() {
+            if (this.SwitchButton.getStatus()) {
+                document.getElementById("lamp").src = 'unnamed.jpg';
+                document.getElementById("result").innerHTML = "bóng đèn bật"
+            } else {
+                document.getElementById("lamp").src = 'unnamed.png';
+                document.getElementById("result").innerHTML = "bóng đèn tắt"
+            }
+        }
+    }
+
+    let s = new SwitchButton(false);
+    let lamp = new Light(s);
+
+    function onOff() {
+        s.onOff();
+        lamp.onLight();
+    }
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>baitap</title>
+</head>
+<body>
+<script>
+    class Nhanvien {
+        constructor(maCanbo, hoTen, gioiTinh, queQuan, namSinh, chuyenMon, trinhDo, heSoLuong, phuCap, thucLinh) {
+            this.maCanBo = maCanbo;
+            this.hoTen = hoTen;
+            this.gioiTinh = gioiTinh;
+            this.queQuan = queQuan;
+            this.namSinh = namSinh;
+            this.chuyenMon = chuyenMon;
+            this.trinhDo = trinhDo;
+            this.heSoLuong = heSoLuong;
+            this.phuCap = phuCap;
+            this.thucLinh = thucLinh;
+        }
+
+        set MaCanBo(macanbo) {
+            this.maCanBo = macanbo;
+        }
+
+        get MaCanBo() {
+            return this.maCanBo
+        }
+
+        set HoTen(hoten) {
+            this.hoTen = hoten;
+        }
+
+        get HoTen() {
+            return this.hoTen;
+        }
+
+        set GioiTinh(gioitinh) {
+            this.gioiTinh = gioitinh;
+        }
+
+        get GioiTinh() {
+            return this.gioiTinh;
+        }
+
+        set QueQuan(quequan) {
+            this.queQuan = quequan;
+        }
+
+        get QueQuan() {
+            return this.queQuan
+        }
+
+        set HeSoLuong(hesoluong) {
+            this.heSoLuong = hesoluong;
+        }
+
+        get HeSoLuong() {
+            return this.heSoLuong;
+        }
+
+        set PhuCap(phucap) {
+            this.phuCap = phucap;
+        }
+
+        get PhuCap() {
+            return this.phuCap;
+        }
+
+        get ThucLinh() {
+            return (this.phuCap + this.heSoLuong) * 450000;
+        }
+    }
+
+    let listNhanVien = [];
+    let nhanVien1 = new Nhanvien();
+    nhanVien1.maCanBo = prompt("nhap ma can bo: ");
+    nhanVien1.hoTen = prompt("nhap ten: ");
+    nhanVien1.gioiTinh = prompt("gioi tinh(nam/nu): ");
+    nhanVien1.queQuan = prompt("que quan:");
+    nhanVien1.heSoLuong = prompt("he so luong: ");
+    nhanVien1.phuCap = prompt("phu cap: ");
+    listNhanVien.push(nhanVien1);
+    let result = "";
+    for (let i = 0; i < listNhanVien.length; i++){
+        result += i + ".Name " + listNhanVien[i].hoTen + "\n";
+    }
+    let choose=parseInt(prompt(result));
+    alert("ten"+listNhanVien[choose].hoTen+"\n"+"thuc linh"+listNhanVien[choose].thucLinh)
+
+
+</script>
+</body>
+</html>

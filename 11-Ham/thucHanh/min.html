@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n=parseInt(prompt("nhập số phần tử của mảng: "));
+    let arr=[];
+    for (let i=0;i<n;i++){
+        let ni=prompt("nhập phần tử thứ: "+(i+1))
+        arr.push(ni)
+    }
+    function findMin(a) {
+        let min=a[0];
+        for (let i=0;i<a.length;i++){
+            if (min>a[i]){
+                min=a[i];
+            }
+        }
+        return alert(min);
+    }
+    findMin(arr);
+</script>
+</body>
+</html>

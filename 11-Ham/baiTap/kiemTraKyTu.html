@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n=parseInt(prompt("nhập số phần tử của mảng: "));
+    let arr=[];
+    for (let i=0;i<n;i++){
+        let characters=prompt("nhập phần tử thứ: "+(i+1));
+        arr.push(characters);
+    }
+    let x=prompt("nhập ký tự cần kiểm tra: ");
+    let dem=0;
+    function kiemTra(x) {
+        for (let i=0;i<arr.length;i++){
+            if (x===arr[i]){
+            dem+=1;
+            }
+        }
+        return dem;
+    }
+    kiemTra(x);
+    alert(dem);
+</script>
+</body>
+</html>
